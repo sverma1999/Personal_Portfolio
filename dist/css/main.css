@@ -198,11 +198,25 @@ main {
   .projects img {
     width: 100%;
     border: 3px #fff solid;
+    min-height: 200px;
+    min-width: 200px;
     max-height: 290px; }
     .projects img:hover {
       opacity: 0.3;
       border-color: yellowgreen;
       transition: all 0.6s ease-out; }
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+
+.contact-icons {
+  position: fixed;
+  top: 55%;
+  font-size: xx-large; }
 
 .btn, .btn-light, .btn-dark {
   display: block;
@@ -227,6 +241,19 @@ main {
   background: #3c3c3c;
   color: #fff;
   height: 60px; }
+
+.contact-info {
+  font-size: 2rem;
+  border: 3px #fff solid;
+  padding: 0.5rem 1.5rem;
+  margin-bottom: 3rem;
+  transition: all 0.6s ease-out; }
+  .contact-info:hover {
+    padding: 1.5rem 2.5rem;
+    background: yellowgreen;
+    color: #000; }
+    .contact-info:hover span {
+      color: #000; }
 
 @media screen and (min-width: 1171px) {
   .projects {
@@ -274,7 +301,18 @@ main {
   .projects {
     grid-template-columns: repeat(2, 1fr); }
     .projects img {
-      max-height: 200px; } }
+      max-height: 200px; }
+  .contact-info {
+    font-size: 1rem;
+    border: 3px #fff solid;
+    padding: 0.5rem 1.5rem;
+    margin-left: 50px;
+    margin-bottom: 2rem;
+    transition: all 0.6s ease-out; }
+  .contact-icons {
+    position: fixed;
+    top: 50%;
+    font-size: xx-large; } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
@@ -282,4 +320,8 @@ main {
   .projects {
     grid-template-columns: 1fr; }
     .projects img {
-      max-height: 200px; } }
+      max-height: 200px; }
+  .contact-icons {
+    position: fixed;
+    top: 55%;
+    font-size: xx-large; } }

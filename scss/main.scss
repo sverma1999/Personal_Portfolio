@@ -127,6 +127,8 @@ main{
     img{
         width: 100%;       
         border: 3px #fff solid;
+        min-height: 200px;
+        min-width: 200px;
         max-height: 290px;       
 
         &:hover{
@@ -137,6 +139,25 @@ main{
     }
 
 }
+
+//Contact Page
+.boxes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
+    
+
+
+}
+.contact-icons{
+    position: fixed;
+    top: 55%;
+    font-size: xx-large;;
+}
+
+
 
 // Button Styles
 .btn{
@@ -169,6 +190,24 @@ main{
     background: darken($primary-color, 10);
     color: set-text-color($primary-color);
     height: 60px;
+}
+
+.contact-info{
+    font-size: 2rem;
+    border: 3px #fff solid;
+    padding: 0.5rem 1.5rem;
+    margin-bottom: 3rem;
+    @include easeOut;
+
+    &:hover{
+        padding: 1.5rem 2.5rem;
+        background: $secondary-color;
+        color: set-text-color($secondary-color);
+        span{
+            color: set-text-color($secondary-color);
+        }
+
+    }
 }
 
 @import 'mobile';

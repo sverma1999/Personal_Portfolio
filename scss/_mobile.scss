@@ -1,5 +1,5 @@
 
-// WideScreens
+// Wide Screens
 @include mediaXl{
     .projects{
         grid-template-columns: repeat(4, 1fr);
@@ -8,6 +8,9 @@
             max-height: 290px;        
         }
     }
+
+   
+
 }
 
 // Desktops & Laptops
@@ -19,6 +22,7 @@
             max-height: 200px;      
         }
     }
+
 }
 
 // Tablets & Small Laptops
@@ -81,6 +85,19 @@
         }
     }
 
+    .contact-info{
+        font-size: 1rem;
+        border: 3px #fff solid;
+        padding: 0.5rem 1.5rem;
+        margin-left: 50px;
+        margin-bottom: 2rem;
+        @include easeOut;
+    }
+    .contact-icons{
+        position: fixed;
+        top: 50%;
+        font-size: xx-large;;
+    }
 }
 
 // Smartphones
@@ -94,5 +111,10 @@
         img{
             max-height: 200px;      
         }
+    }  
+    .contact-icons{
+        position: fixed;
+        top: 55%;
+        font-size: xx-large;;
     }
 }
