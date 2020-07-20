@@ -4,6 +4,8 @@ const menu = document.querySelector('.menu');
 const menuNav = document.querySelector('.menu-nav');
 const menuBranding = document.querySelector('.menu-branding');
 const navItems = document.querySelectorAll('.nav-item');
+const tabLinks = document.querySelectorAll(".tabs a");
+const tabPanels = document.querySelectorAll(".tabs-panel");
 
 
 // Set Initials State of the Menu
@@ -31,4 +33,25 @@ function toggleMenu() {
         //Set Menu State
         showMenu = false;
     }
+}
+
+//Tabs
+for (let tl of tabLinks) {
+    tl.addEventListener('click', e => {
+        e.preventDefault();
+
+        const activeTab = document.querySelector('.tabs li.active');
+        const activePanel = document.querySelector('.tabs-panel.active');
+
+        activeTab.classList.remove('active');
+        activePanel.classList.remove('active');
+
+        const parentListItem = tl.parentElement;
+        console.log(parentListItem);
+        parentListItem.classList.add('active');
+        const index = [...parentListItem.parentElement.children].indexOf(parentListItem);
+
+        const panel = [...tabPanels].filter(tl => tl.getAttribute('data-index') == index);
+        panel[0].classList.add('active');
+    });
 }

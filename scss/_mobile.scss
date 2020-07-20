@@ -5,7 +5,8 @@
         grid-template-columns: repeat(4, 1fr);
 
         img{
-            max-height: 290px;        
+            min-height: 260px;
+            max-height: 260px;        
         }
     }
 
@@ -19,10 +20,23 @@
         grid-template-columns: repeat(3, 1fr);
 
         img{
+            min-width: 223px;
             max-height: 200px;      
         }
     }
 
+    .about-info{
+        grid-template-areas:
+        'bioimage'
+        'bio'
+        'job1'
+        'job2'
+        'resume';
+
+        grid-template-columns: 1fr;
+
+       
+    } 
 }
 
 // Tablets & Small Laptops
@@ -73,15 +87,18 @@
         'bio'
         'job1'
         'job2'
-        'job3';
+        'resume';
 
         grid-template-columns: 1fr;
+
+       
     }    
 
     .projects{
         grid-template-columns: repeat(2, 1fr);
         img{
-            max-height: 200px;      
+            max-height: 200px;  
+            min-width: 235px;    
         }
     }
 
@@ -117,4 +134,10 @@
         top: 55%;
         font-size: xx-large;;
     }
+    .tabs {
+        display: flex;
+        margin-right: 50px;
+      }
+
+    
 }
