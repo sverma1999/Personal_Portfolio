@@ -267,9 +267,23 @@ main {
   align-items: center;
   margin-top: 1rem; }
 
+.contact-info {
+  font-size: 1.7rem;
+  border: 3px #fff solid;
+  padding: 0.5rem 1.5rem;
+  margin: 3rem;
+  align-self: center;
+  transition: all 0.4s ease-out; }
+  .contact-info:hover {
+    padding: 1.5rem 2.5rem;
+    background: yellowgreen;
+    color: #000; }
+    .contact-info:hover span {
+      color: #000; }
+
 .contact-icons {
-  position: fixed;
-  top: 55%;
+  position: relative;
+  margin: 20rem;
   font-size: xx-large; }
 
 .btn, .btn-light, .btn-dark {
@@ -298,19 +312,6 @@ main {
   color: #fff;
   height: 60px; }
 
-.contact-info {
-  font-size: 2rem;
-  border: 3px #fff solid;
-  padding: 0.5rem 1.5rem;
-  margin-bottom: 3rem;
-  transition: all 0.4s ease-out; }
-  .contact-info:hover {
-    padding: 1.5rem 2.5rem;
-    background: yellowgreen;
-    color: #000; }
-    .contact-info:hover span {
-      color: #000; }
-
 @media screen and (min-width: 1271px) {
   .projects {
     grid-template-columns: repeat(4, 1fr); }
@@ -326,7 +327,19 @@ main {
       max-height: 200px; }
   .about-info {
     grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'resume';
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .contact-info {
+    font-size: 1.5rem;
+    border: 3px #fff solid;
+    padding: 0.5rem 1.5rem;
+    margin: 0.6rem;
+    align-items: center;
+    transition: all 0.4s ease-out; }
+  .contact-icons {
+    position: relative;
+    margin: 17rem;
+    align-items: center;
+    font-size: xx-large; } }
 
 @media screen and (max-width: 860px) {
   main {
@@ -365,15 +378,14 @@ main {
       max-height: 200px;
       min-width: 235px; }
   .contact-info {
-    font-size: 1rem;
+    font-size: 1.4rem;
     border: 3px #fff solid;
     padding: 0.5rem 1.5rem;
-    margin-left: 50px;
-    margin-bottom: 2rem;
+    margin: 1rem;
     transition: all 0.4s ease-out; }
   .contact-icons {
-    position: fixed;
-    top: 50%;
+    position: relative;
+    margin: 100%;
     font-size: xx-large; } }
 
 @media screen and (max-width: 640px) {
@@ -383,9 +395,15 @@ main {
     grid-template-columns: 1fr; }
     .projects img {
       max-height: 200px; }
+  .contact-info {
+    font-size: 1rem;
+    border: 3px #fff solid;
+    padding: 0.5rem 1.5rem;
+    margin: 1rem;
+    transition: all 0.4s ease-out; }
   .contact-icons {
-    position: fixed;
-    top: 55%;
+    position: relative;
+    margin: 100%;
     font-size: xx-large; }
   .tabs {
     display: flex;

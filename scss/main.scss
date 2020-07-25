@@ -221,14 +221,33 @@ main{
     justify-content: space-evenly;
     align-items: center;
     margin-top: 1rem;
-    
-
 
 }
+.contact-info{
+    font-size: 1.7rem;
+    border: 3px #fff solid;
+    padding: 0.5rem 1.5rem;
+    margin: 3rem;
+    align-self: center;
+    @include easeOut;
+
+    &:hover{
+        padding: 1.5rem 2.5rem;
+        background: $secondary-color;
+        color: set-text-color($secondary-color);
+        span{
+            color: set-text-color($secondary-color);
+        }
+
+    }
+}
+
 .contact-icons{
-    position: fixed;
-    top: 55%;
-    font-size: xx-large;;
+    position: relative;
+    
+    margin: 20rem;
+    
+    font-size: xx-large;
 }
 
 
@@ -268,22 +287,6 @@ main{
     height: 60px;
 }
 
-.contact-info{
-    font-size: 2rem;
-    border: 3px #fff solid;
-    padding: 0.5rem 1.5rem;
-    margin-bottom: 3rem;
-    @include easeOut;
 
-    &:hover{
-        padding: 1.5rem 2.5rem;
-        background: $secondary-color;
-        color: set-text-color($secondary-color);
-        span{
-            color: set-text-color($secondary-color);
-        }
-
-    }
-}
 
 @import 'mobile';

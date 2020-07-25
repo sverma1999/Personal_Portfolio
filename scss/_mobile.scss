@@ -34,9 +34,28 @@
         'resume';
 
         grid-template-columns: 1fr;
-
        
     } 
+
+    .contact-info{
+        font-size: 1.5rem;
+        border: 3px #fff solid;
+        padding: 0.5rem 1.5rem;
+        //margin-left: 70px;
+        margin: 0.6rem;
+        align-items: center;
+        @include easeOut;
+    }
+
+    .contact-icons{
+        position: relative;
+        //margin-left: 20%;
+        margin: 17rem;
+        
+        //margin-bottom: 100px;
+        align-items: center;
+        font-size: xx-large;
+    }
 }
 
 // Tablets & Small Laptops
@@ -103,16 +122,15 @@
     }
 
     .contact-info{
-        font-size: 1rem;
+        font-size: 1.4rem;
         border: 3px #fff solid;
         padding: 0.5rem 1.5rem;
-        margin-left: 50px;
-        margin-bottom: 2rem;
+        margin: 1rem;
         @include easeOut;
     }
     .contact-icons{
-        position: fixed;
-        top: 50%;
+        position: relative;
+        margin: 100%;
         font-size: xx-large;;
     }
 }
@@ -129,10 +147,18 @@
             max-height: 200px;      
         }
     }  
+    .contact-info{
+        font-size: 1rem;
+        border: 3px #fff solid;
+        padding: 0.5rem 1.5rem;
+        margin: 1rem;
+        @include easeOut;
+    }
+
     .contact-icons{
-        position: fixed;
-        top: 55%;
-        font-size: xx-large;;
+        position: relative;
+        margin: 100%;
+        font-size: xx-large;
     }
     .tabs {
         display: flex;
