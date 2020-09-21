@@ -174,7 +174,9 @@
 
 // Smartphones
 @include mediaSm{
-   
+    body{
+        font-size: 0.8rem;
+    }
     main{
         align-items: center;
         text-align: center;
@@ -186,6 +188,7 @@
             font-size: 3rem
         }
     }
+    
     .bio-image{
         grid-area: bioimage;
         margin: auto;
@@ -211,7 +214,8 @@
     }
     .non-technical{  
         float: right;    
-        padding-right: 0rem;
+        padding-right: 0px;
+        align-content: flex-end;
     }
     .projects{
         grid-template-columns: 1fr;

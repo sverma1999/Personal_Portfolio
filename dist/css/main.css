@@ -419,6 +419,8 @@ main {
     font-size: xx-large; } }
 
 @media screen and (max-width: 640px) {
+  body {
+    font-size: 0.8rem; }
   main {
     align-items: center;
     text-align: center;
@@ -440,7 +442,8 @@ main {
     padding-left: 0rem; }
   .non-technical {
     float: right;
-    padding-right: 0rem; }
+    padding-right: 0px;
+    align-content: flex-end; }
   .projects {
     grid-template-columns: 1fr;
     position: static; }
