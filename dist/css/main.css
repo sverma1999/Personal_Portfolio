@@ -111,7 +111,7 @@ body {
     background-position: center; }
     body#bg-img:after {
       content: '';
-      position: absolute;
+      position: fixed;
       top: 0;
       right: 0;
       width: 100%;
@@ -421,7 +421,8 @@ main {
 @media screen and (max-width: 640px) {
   main {
     align-items: center;
-    text-align: center; }
+    text-align: center;
+    position: static; }
     main .lg-heading {
       line-height: 1;
       margin-bottom: 1rem;
