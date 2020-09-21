@@ -420,7 +420,7 @@ main {
 
 @media screen and (max-width: 640px) {
   body {
-    font-size: 0.8rem; }
+    font-size: 0.9rem; }
   main {
     align-items: center;
     text-align: center;
@@ -430,7 +430,7 @@ main {
       margin-bottom: 1rem;
       font-size: 3rem; }
   .skills {
-    font-size: 0.6rem; }
+    font-size: 0.798rem; }
   .bio-image {
     grid-area: bioimage;
     margin: auto;
@@ -439,6 +439,10 @@ main {
   .about-info {
     grid-template-areas: 'bioimage' 'bio' 'skillsList' 'job1' 'job2' 'resume';
     grid-template-columns: 1fr; }
+  .job {
+    text-align: left; }
+    .job h3, .job h5 {
+      text-align: center; }
   .technical {
     float: left;
     padding-left: 0rem; }
