@@ -427,6 +427,14 @@ main {
       line-height: 1;
       margin-bottom: 1rem;
       font-size: 3rem; }
+  .bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    border: yellowgreen 3px solid; }
+  .about-info {
+    grid-template-areas: 'bioimage' 'bio' 'skillsList' 'job1' 'job2' 'resume';
+    grid-template-columns: 1fr; }
   .technical {
     float: left;
     padding-left: 0rem; }
@@ -434,7 +442,8 @@ main {
     float: right;
     padding-right: 0rem; }
   .projects {
-    grid-template-columns: 1fr; }
+    grid-template-columns: 1fr;
+    position: static; }
     .projects img {
       max-height: 200px; }
   .contact-info {
