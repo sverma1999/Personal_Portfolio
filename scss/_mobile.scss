@@ -175,7 +175,7 @@
 // Smartphones
 @include mediaSm{
     body{
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
     main{
         align-items: center;
@@ -191,7 +191,7 @@
     }
     
     .skills{
-        font-size: 0.6rem;
+        font-size: 0.798rem;
     }
     .bio-image{
         grid-area: bioimage;
@@ -209,9 +209,16 @@
         'job2'
         'resume';
 
-        grid-template-columns: 1fr;  
+        grid-template-columns: 1fr;
+          
     } 
 
+    .job{
+        text-align: left;
+        h3,h5{
+            text-align: center;
+        }
+    }
     .technical{
         float: left;
         padding-left: 0rem;
