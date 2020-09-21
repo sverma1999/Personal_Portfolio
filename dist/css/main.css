@@ -321,6 +321,9 @@ main {
     .projects img {
       min-height: 260px;
       max-height: 260px; }
+  .about-info {
+    grid-template-areas: 'bioimage bio' 'skillsList job1 job2';
+    grid-template-columns: repeat(3, 1fr); }
   .technical {
     float: left;
     padding-left: 0rem; }
