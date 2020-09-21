@@ -10,8 +10,13 @@
         }
     }
 
-   
-
+    
+    .technical{
+        padding-left: 0rem;
+    }
+    .non-technical{      
+        padding-right: 0rem;
+    }
 }
 
 // Desktops & Laptops
@@ -29,13 +34,19 @@
         grid-template-areas:
         'bioimage'
         'bio'
+        'skillsList'
         'job1'
         'job2'
         'resume';
 
         grid-template-columns: 1fr;
-       
     } 
+    .technical{
+        padding-left: 10rem;
+    }
+    .non-technical{      
+        padding-right: 10rem;
+    }
 
     .contact-info{
         font-size: 1.5rem;
@@ -69,6 +80,14 @@
             margin-bottom: 1rem;
         }
     }
+
+    .technical{
+        padding-left: 0rem;
+    }
+    .non-technical{      
+        padding-right: 0rem;
+    }
+
 
     ul.menu-nav,
     div.menu-branding{
@@ -104,14 +123,20 @@
         grid-template-areas:
         'bioimage'
         'bio'
+        'skillsList'
         'job1'
         'job2'
         'resume';
 
-        grid-template-columns: 1fr;
-
-       
+        grid-template-columns: 1fr;  
     }    
+
+    .technical{
+        padding-left: 4rem;
+    }
+    .non-technical{      
+        padding-right: 4rem;
+    }
 
     .projects{
         grid-template-columns: repeat(2, 1fr);
@@ -141,6 +166,12 @@
         margin-top: 10vh
     }
 
+    .technical{
+        padding-left: 1rem;
+    }
+    .non-technical{      
+        padding-right: 1rem;
+    }
     .projects{
         grid-template-columns: 1fr;
         img{

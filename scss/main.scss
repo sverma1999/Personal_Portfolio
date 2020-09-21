@@ -84,7 +84,7 @@ main{
     display: grid;
     grid-template-areas: 
     'bioimage bio bio'
-    'job1 job2 job3';
+    'skillsList job1 job2';
     grid-gap: 30px;
     grid-template-columns: repeat(3, 1fr);
 }
@@ -99,6 +99,23 @@ main{
 .bio{
     grid-area: bio;
 }
+
+.skills{
+    grid-area: skillsList;
+    position: static;
+    text-align: center;
+    margin-top: 100px;
+    
+}
+.technical{
+    float: left;
+    padding-left: 6rem;
+}
+.non-technical{
+    float: right;
+    padding-right: 6rem;
+}
+
 
 .job-1{
     grid-area: job1;
@@ -117,22 +134,23 @@ main{
     position: static;
     text-align: center;
     margin-top: 100px;
+
 }
 
-.resume_download{
-    height: 2rem;
-    width: 6rem;
-    text-decoration: underline;
-    &:hover{
-        background: $secondary-color;
-        color: set-text-color($secondary-color);
-        span{
-            color: set-text-color($secondary-color);
-        }
-        @include easeOut
-    }
+// .resume_download{
+//     height: 2rem;
+//     width: 6rem;
+//     text-decoration: underline;
+//     &:hover{
+//         background: $secondary-color;
+//         color: set-text-color($secondary-color);
+//         span{
+//             color: set-text-color($secondary-color);
+//         }
+//         @include easeOut
+//     }
    
-}
+// }
 
 //Work/Projects section
 .projects{
