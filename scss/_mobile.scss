@@ -11,11 +11,10 @@
     .about-info{
         display: grid;
         grid-template-areas: 
-        'bioimage bio'
-        'skillsList job1 job2'
-        'resume';
+        'bioimage bio bio'
+        'skillsList job1 job2';
         grid-gap: 30px;
-        
+        grid-template-columns: repeat(3, 1fr);
     }
     .technical{
         float: left;
