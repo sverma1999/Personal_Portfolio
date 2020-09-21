@@ -8,14 +8,7 @@
             max-height: 260px;        
         }
     }
-    .about-info{
-        display: grid;
-        grid-template-areas: 
-        'bioimage bio bio'
-        'skillsList job1 job2';
-        grid-gap: 30px;
-        grid-template-columns: repeat(3, 1fr);
-    }
+    
     .technical{
         float: left;
         padding-left: 0rem;
