@@ -419,6 +419,12 @@ main {
     font-size: xx-large; } }
 
 @media screen and (max-width: 640px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
   .technical {
     float: left;
     padding-left: 0rem; }
