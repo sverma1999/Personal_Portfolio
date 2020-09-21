@@ -10,8 +10,9 @@
     }
     .about-info{
         grid-template-areas: 
-        'bioimage bio bio'
-        'skillsList job1 job2';
+        'bioimage bio'
+        'skillsList job1 job2'
+        'resume';
         grid-template-columns: 1fr;
     }
     .technical{

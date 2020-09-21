@@ -322,7 +322,7 @@ main {
       min-height: 260px;
       max-height: 260px; }
   .about-info {
-    grid-template-areas: 'bioimage bio bio' 'skillsList job1 job2';
+    grid-template-areas: 'bioimage bio' 'skillsList job1 job2' 'resume';
     grid-template-columns: 1fr; }
   .technical {
     float: left;
