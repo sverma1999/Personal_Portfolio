@@ -316,11 +316,9 @@ main {
   height: 60px; }
 
 @media screen and (min-width: 1271px) {
-  .projects {
-    grid-template-columns: repeat(4, 1fr); }
-    .projects img {
-      min-height: 260px;
-      max-height: 260px; }
+  .projects img {
+    min-height: 260px;
+    max-height: 260px; }
   .about-info {
     display: grid;
     grid-template-areas: 'bioimage bio bio' 'skillsList job1 job2';
