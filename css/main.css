@@ -429,6 +429,8 @@ main {
       line-height: 1;
       margin-bottom: 1rem;
       font-size: 3rem; }
+  .skills {
+    font-size: 0.6rem; }
   .bio-image {
     grid-area: bioimage;
     margin: auto;
@@ -442,7 +444,7 @@ main {
     padding-left: 0rem; }
   .non-technical {
     float: right;
-    padding-right: 0px;
+    padding-right: 0rem;
     align-content: flex-end; }
   .projects {
     grid-template-columns: 1fr;
