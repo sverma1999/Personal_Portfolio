@@ -419,14 +419,12 @@ main {
     font-size: xx-large; } }
 
 @media screen and (max-width: 640px) {
-  main#home h1 {
-    margin-top: 10vh; }
   .technical {
     float: left;
-    padding-left: 1rem; }
+    padding-left: 0rem; }
   .non-technical {
     float: right;
-    padding-right: 1rem; }
+    padding-right: 0rem; }
   .projects {
     grid-template-columns: 1fr; }
     .projects img {
