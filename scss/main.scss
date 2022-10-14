@@ -76,13 +76,16 @@ main {
 //about me section
 .about-info {
   display: grid;
-  grid-template-areas:
-    "bioimage bio bio"
-    "skillsList job1 job2";
-  grid-gap: 30px;
-  grid-template-columns: repeat(3, 1fr);
-}
 
+  align-items: center;
+  text-align: center;
+  grid-template-areas:
+    "bioimage"
+    "bio bio"
+    "cricket-area";
+  grid-gap: 30px;
+  grid-template-columns: 1fr;
+}
 .bio-image {
   grid-area: bioimage;
   margin: auto;
@@ -92,21 +95,68 @@ main {
 
 .bio {
   grid-area: bio;
+  margin-left: 10rem;
+  margin-right: 10rem;
 }
 
-.skills {
-  grid-area: skillsList;
-  position: static;
+//Skills
+.skills-info {
+  align-items: center;
   text-align: center;
-  margin-top: 100px;
+  position: static;
+  grid-template-areas:
+    "bioimage"
+    "skillsList";
+
+  grid-gap: 30px;
+  grid-template-columns: 1fr;
 }
-.technical {
-  float: left;
-  padding-left: 6rem;
+.skills {
+  //grid-area: skillsList;
+  //position: static;
+  max-width: 100%;
+  margin: 20px auto;
+  padding: 20px;
+  //   text-align: center;
+  //align-items: center;
+  //margin-top: 100px;
 }
-.non-technical {
-  float: right;
-  padding-right: 6rem;
+
+.skills-content {
+  position: static;
+  padding: 2rem;
+
+  border-radius: 0 4px 4px 4px;
+}
+
+.skills-panel {
+  display: grid;
+  padding: 2rem;
+}
+.skillSet-List {
+  display: grid;
+  grid-gap: 5rem;
+  //position: static;
+  //margin-right: 10rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+.skill-details {
+  margin-top: 1rem;
+}
+
+//Experience
+.experience-info {
+  display: grid;
+  align-items: center;
+  //text-align: center;
+  grid-template-areas:
+    "bioimage"
+    "job1"
+    "job2"
+    "job3";
+
+  grid-gap: 30px;
+  grid-template-columns: 1fr;
 }
 
 .job-1 {
@@ -117,11 +167,26 @@ main {
   grid-area: job2;
 }
 
+.job-3 {
+  grid-area: job3;
+}
+
 .job {
   background: lighten($primary-color, 5);
-  padding: 0.5rem;
+  padding: 1rem;
   border-bottom: $secondary-color 5px solid;
+  text-align: center;
 }
+.job-1-details {
+  text-align: left;
+}
+.job-2-details {
+  text-align: left;
+}
+.job-3-details {
+  text-align: left;
+}
+
 .resume {
   position: static;
   text-align: center;
@@ -147,8 +212,8 @@ main {
 .projects {
   display: grid;
   grid-gap: 0.7rem;
-
-  grid-template-columns: repeat(3, 1fr);
+  position: static;
+  grid-template-columns: repeat(2, 1fr);
 
   img {
     width: 100%;
@@ -166,13 +231,15 @@ main {
 }
 
 .tabs-container {
+  position: static;
   max-width: 100%;
   margin: 20px auto;
-  padding: 20px;
+  padding-top: 1rem;
   ul {
     list-style: none;
   }
 }
+
 
 .tabs {
   display: flex;
@@ -184,7 +251,7 @@ main {
 
 .tabs li a {
   display: grid;
-  position: relative;
+  position: static;
   top: 4px;
   padding: 10px 25px;
   border-radius: 2px 2px 0 0;
@@ -203,16 +270,38 @@ main {
 .tabs-content {
   position: static;
   z-index: 2;
-  padding: 25px;
+  padding-top: 2rem;
   border-radius: 0 4px 4px 4px;
 }
+.contact-info {
+  font-size: 1.7rem;
+  border: 3px #fff solid;
+  padding: 0.5rem 1.5rem;
+  margin: 3rem;
+  align-self: center;
+  @include easeOut;
+
+  &:hover {
+    padding: 1.5rem 2.5rem;
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+    span {
+      color: set-text-color($secondary-color);
+    }
+  }
+}
+
+.contact-icons {
+  position: relative;
 
 .tabs-panel {
   display: none;
+  padding-top: 0rem;
 }
 
 .tabs-panel.active {
   display: grid;
+  padding-top: 0rem;
 }
 
 //Contact Page
@@ -284,53 +373,5 @@ main {
   height: 60px;
 }
 
+
 @import "mobile";
-
-
-
-
-.app__navbar-links {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  list-style: none;
-
-  li {
-    margin: 0 1rem;
-    cursor: pointer;
-
-    flex-direction: column;
-
-    div {
-      width: 5px;
-      height: 5px;
-      background: transparent;
-      border-radius: 50%;
-
-      margin-bottom: 5px;
-    }
-  }
-
-  a {
-    color: var(--gray-color);
-    text-decoration: none;
-    flex-direction: column;
-
-    text-transform: uppercase;
-    font-weight: 500;
-
-    transition: all 0.3s ease-in-out;
-
-    &:hover {
-      color: var(--secondary-color);
-    }
-  }
-
-  &:hover {
-    div {
-      background: var(--secondary-color);
-    }
-  }
-}

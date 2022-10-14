@@ -1,258 +1,305 @@
-
 // Wide Screens
-@include mediaXl{
-    .projects{
-        grid-template-columns: repeat(3, 1fr);
-        img{
-            min-height: 260px;
-            max-height: 260px;        
-        }
+@include mediaXl {
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    text-align: center;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    img {
+      min-height: 335px;
+      max-height: 350px;
+      min-width: 300px;
     }
-    .about-info{
-        
-        grid-template-areas: 
-        'bioimage bio'
-        'skillsList job1 job2';
-        grid-template-columns: repeat(3, 1fr);
-    }
-    .technical{
-        float: left;
-        padding-left: 0rem;
-    }
-    .non-technical{  
-        float: right;    
-        padding-right: 0rem;
-    }
+  }
+  .item {
+    margin: 0rem 2rem;
+  }
+
+  .about-info {
+    grid-template-areas:
+      "bioimage"
+      "bio";
+    grid-template-columns: 1fr;
+  }
+
+  .skills-info {
+    grid-template-columns: 1fr;
+  }
+  .experience-info {
+    padding-left: 15rem;
+    padding-right: 15rem;
+  }
 }
 
 // Desktops & Laptops
-@include mediaLg{
-    .projects{
-        grid-template-columns: repeat(3, 1fr);
-
-        img{
-            min-width: 223px;
-            max-height: 200px;      
-        }
+@include mediaLg {
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 5rem;
+    img {
+      min-width: 335px;
+      max-height: 300px;
     }
+  }
+  .item {
+    margin: 0rem 1rem;
+  }
 
-    .about-info{
-        grid-template-areas:
-        'bioimage'
-        'bio'
-        'skillsList'
-        'job1'
-        'job2'
-        'resume';
+  .about-info {
+    grid-template-areas:
+      "bioimage"
+      "bio";
 
-        grid-template-columns: 1fr;
-    } 
-    .technical{
-        float: left;
-        padding-left: 10rem;
-    }
-    .non-technical{   
-        float: right;   
-        padding-right: 10rem;
-    }
+    grid-template-columns: 1fr;
+  }
+  .bio {
+    grid-area: bio;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
 
-    .contact-info{
-        font-size: 1.5rem;
-        border: 3px #fff solid;
-        padding: 0.5rem 1.5rem;
-        //margin-left: 70px;
-        margin: 0.6rem;
-        align-items: center;
-        @include easeOut;
-    }
+  .contact-info {
+    font-size: 1.5rem;
+    border: 3px #fff solid;
+    padding: 0.5rem 1.5rem;
+    //margin-left: 70px;
+    margin: 0.6rem;
+    align-items: center;
+    @include easeOut;
+  }
 
-    .contact-icons{
-        position: relative;
-        //margin-left: 20%;
-        margin: 17rem;
-        
-        //margin-bottom: 100px;
-        align-items: center;
-        font-size: xx-large;
-    }
+  .contact-icons {
+    position: relative;
+    //margin-left: 20%;
+    margin: 17rem;
+
+    //margin-bottom: 100px;
+    align-items: center;
+    font-size: xx-large;
+  }
+
+  .experience-info {
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
 }
 
 // Tablets & Small Laptops
-@include mediaMd{
-    main{
-        align-items: center;
-        text-align: center;
-
-        .lg-heading{
-            line-height: 1;
-            margin-bottom: 1rem;
-        }
+@include mediaMd {
+  main {
+    align-items: center;
+    text-align: center;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem;
     }
+  }
 
-    .technical{
-        float: left;
-        padding-left: 0rem;
+  .skills-content {
+    position: static;
+    padding: 0.2rem;
+
+    border-radius: 0 4px 4px 4px;
+  }
+
+  .skills-panel {
+    display: grid;
+    padding: 2rem;
+  }
+  .skillSet-List {
+    display: grid;
+    grid-gap: 2rem;
+    //position: static;
+    //margin-right: 10rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0;
+
+    &.show {
+      transform: translate3d(0, 0, 0);
     }
-    .non-technical{  
-        float: right;    
-        padding-right: 0rem;
+  }
+
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px;
+  }
+
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0);
+
+    .portrait {
+      background: url("../img/portrait_small.jpg");
+      width: 150px;
+      height: 150px;
+      background-position: center;
+      background-size: cover;
     }
+  }
 
+  .about-info {
+    grid-template-areas:
+      "bioimage"
+      "bio";
 
-    ul.menu-nav,
-    div.menu-branding{
-        float: none;
-        width: 100%;
-        min-height: 0;
+    grid-template-columns: 1fr;
+  }
 
-        &.show{
-            transform: translate3d(0, 0, 0);
-        }
+  .bio {
+    grid-area: bio;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+    align-items: center;
+    text-align: center;
+    padding-right: 10rem;
+    padding-left: 5rem;
+    img {
+      max-height: 300px;
+      min-width: 480px;
     }
+  }
+  .item {
+    margin: 1rem 1rem;
+  }
 
-    .menu-nav{
-        height: 75vh;
-        transform: translate3d(-100%, 0, 0);
-        font-size: 24px;
-    }
+  .contact-info {
+    font-size: 1.4rem;
+    border: 3px #fff solid;
+    padding: 0.5rem 1.5rem;
+    margin: 1rem;
+    height: 100%;
+    @include easeOut;
+  }
+  .contact-icons {
+    position: static;
+    margin: 100%;
+    font-size: xx-large;
+  }
 
-    .menu-branding{
-        height: 25vh;
-        transform: translate3d(100%, 0, 0);
-
-        .portrait{
-            background: url('../img/portrait_small.jpg');
-            width: 150px;
-            height: 150px;
-            background-position: center;
-            background-size: cover;
-        }
-    }
-
-    .about-info{
-        grid-template-areas:
-        'bioimage'
-        'bio'
-        'skillsList'
-        'job1'
-        'job2'
-        'resume';
-
-        grid-template-columns: 1fr;  
-    }    
-
-    .technical{
-        float: left;
-        padding-left: 4rem;
-    }
-    .non-technical{  
-        float: right;    
-        padding-right: 4rem;
-    }
-
-    .projects{
-        grid-template-columns: repeat(2, 1fr);
-        img{
-            max-height: 200px;  
-            min-width: 235px;    
-        }
-    }
-
-    .contact-info{
-        font-size: 1.4rem;
-        border: 3px #fff solid;
-        padding: 0.5rem 1.5rem;
-        margin: 1rem;
-        @include easeOut;
-    }
-    .contact-icons{
-        position: relative;
-        margin: 100%;
-        font-size: xx-large;;
-    }
+  .experience-info {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
 }
 
 // Smartphones
-@include mediaSm{
-    body{
-        font-size: 0.9rem;
-    }
-    main{
-        align-items: center;
-        text-align: center;
-        position: static;
+@include mediaSm {
+  body {
+    font-size: 0.9rem;
+  }
+  main {
+    align-items: center;
+    text-align: center;
+    position: static;
 
-        .lg-heading{
-            line-height: 1;
-            margin-bottom: 1rem;
-            font-size: 3rem
-        }
-        
+    .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem;
+      font-size: 3rem;
     }
-    
-    .skills{
-        font-size: 0.798rem;
-    }
-    .bio-image{
-        grid-area: bioimage;
-        margin: auto;
-        border-radius: 50%;
-        border: $secondary-color 3px solid;
-    }
+  }
 
-    .about-info{
-        grid-template-areas:
-        'bioimage'
-        'bio'
-        'skillsList'
-        'job1'
-        'job2'
-        'resume';
+  .skills {
+    font-size: 0.798rem;
+  }
+  .skills-content {
+    position: static;
+    padding: 0.2rem;
 
-        grid-template-columns: 1fr;
-          
-    } 
+    border-radius: 0 4px 4px 4px;
+  }
 
-    .job{
-        text-align: left;
-        h3,h5{
-            text-align: center;
-        }
-    }
-    .technical{
-        float: left;
-        padding-left: 0rem;
-    }
-    .non-technical{  
-        float: right;    
-        padding-right: 0rem;
-        align-content: flex-end;
-    }
-    .projects{
-        grid-template-columns: 1fr;
-        img{
-            max-height: 200px;      
-        }
-        position: static;
+  .skills-panel {
+    display: grid;
+    padding: 2rem;
+  }
+  .skillSet-List {
+    display: grid;
+    grid-gap: 2rem;
+    //position: static;
+    //margin-right: 10rem;
+    grid-template-columns: 1fr;
+  }
 
-    }  
-    .contact-info{
-        font-size: 1rem;
-        border: 3px #fff solid;
-        padding: 0.5rem 1.5rem;
-        margin: 1rem;
-        @include easeOut;
-    }
+  .bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    border: $secondary-color 3px solid;
+  }
 
-    .contact-icons{
-        position: relative;
-        margin: 100%;
-        font-size: xx-large;
-    }
-    .tabs {
-        display: flex;
-        margin-right: 50px;
-      }
+  .about-info {
+    grid-template-areas:
+      "bioimage"
+      "bio";
 
-    
+    grid-template-columns: 1fr;
+  }
+  .bio {
+    grid-area: bio;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .job {
+    text-align: left;
+    h3,
+    h5 {
+      text-align: center;
+    }
+    padding: 0rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+    align-items: center;
+    text-align: center;
+    padding-right: 1rem;
+    padding-left: 0rem;
+    img {
+      max-height: 250px;
+      min-width: 300px;
+    }
+    position: static;
+  }
+  .item {
+    margin: 1rem 1rem;
+  }
+  .contact-info {
+    font-size: 1rem;
+    border: 3px #fff solid;
+    padding: 0.5rem 1.5rem;
+    margin: 1rem;
+    height: 100%;
+    @include easeOut;
+  }
+
+  .contact-icons {
+    position: relative;
+    margin: 100%;
+    font-size: xx-large;
+  }
+  .tabs {
+    display: flex;
+    margin-right: 50px;
+  }
 }
