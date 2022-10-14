@@ -76,6 +76,7 @@ main {
 //about me section
 .about-info {
   display: grid;
+
   align-items: center;
   text-align: center;
   grid-template-areas:
@@ -239,6 +240,7 @@ main {
   }
 }
 
+
 .tabs {
   display: flex;
 }
@@ -271,6 +273,26 @@ main {
   padding-top: 2rem;
   border-radius: 0 4px 4px 4px;
 }
+.contact-info {
+  font-size: 1.7rem;
+  border: 3px #fff solid;
+  padding: 0.5rem 1.5rem;
+  margin: 3rem;
+  align-self: center;
+  @include easeOut;
+
+  &:hover {
+    padding: 1.5rem 2.5rem;
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+    span {
+      color: set-text-color($secondary-color);
+    }
+  }
+}
+
+.contact-icons {
+  position: relative;
 
 .tabs-panel {
   display: none;
@@ -350,5 +372,6 @@ main {
   color: set-text-color($primary-color);
   height: 60px;
 }
+
 
 @import "mobile";
